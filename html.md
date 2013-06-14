@@ -9,7 +9,7 @@ Sources: [Henri Sivonen](http://hsivonen.iki.fi/doctype/), [John Resig](http://e
 
 ***
 ###Tags
-- **If building a content site, save your h1 for article titles  
+- **If building a content site, save your h1 for article titles**  
 It is common practice to use the h1 for the logo, but for SEO purposes, it's best to use for article titles.  
 
 - Place your navigation inside unordered lists  
