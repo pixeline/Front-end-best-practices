@@ -1,6 +1,6 @@
 #Front-end best practices 
 
-A collection of best practices for front-end development. 
+A collection of best practices for front-end development. For learning and reference purpose.
 
 Work in progress. Will be updated often.  
 
