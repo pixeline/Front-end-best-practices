@@ -18,6 +18,9 @@ The title tag appears in the browser tabs and in search engines' results. Make t
 - **Use good meta tags**  
 For example the 'description' meta, is about the purpose of your site and shows up in search engines' results.  
 
+- **Place your stylesheets at the end of the Head tag**  
+It allows the page to render progressively. The purpose is to make the page load look faster.
+
 ***
 
 ###Tags
@@ -69,36 +72,6 @@ Styles
 Be professional when writing your code from the start, indent it properly, and make it easy to read. Consider other people that might work on your code.  
 
 ***
-
-###Styles
-
-- **Place all your styles before the end of the Head tag**  
-It allows the page to render progressively. The purpose is to make the page load look faster.  
-
-- **Use Normalize.css**  
-In their own words: "It makes browsers render all elements more consistently and in line with modern standards."  
-It is better to use Normalize.css than a standard reset.css, because it keeps useful defaults rather than unstyling all elements.
-[Normalize](http://necolas.github.io/normalize.css/)  
-
-
-- **Never use inline styles**  
-Keep the styles out of the HTML. Think separation of concerns. It makes mainteanance much easier.  
-
-- **Target IE with specific stylesheets**  
-```
-<!--[if lt IE 7] >
-	<link rel="stylesheet" href="ie.css">
-<![endif]-->
-```  
-
-- **Compress your CSS when you're done**  
-A compressed file is smaller, thus faster to load.  
-You can use [CSS Optimiser](http://www.cssoptimiser.com/), [CSS compressor](http://www.cssdrive.com/index.php/main/csscompressor/), [Clean CSS](http://www.cleancss.com/)  
-
-- **Style all elements !**  
-You might not need a blockquote at first launch, but that doesn't mean it won't ever be needed. Plan for every possible case !  
-
-***  
 
 ###Scripts
 
