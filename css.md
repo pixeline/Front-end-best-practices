@@ -10,7 +10,7 @@ Keep the styles out of the HTML. Think separation of concerns. It makes maintean
 - **Target IE with specific stylesheets**  
 ```
 <!--[if lt IE 7] >
-	<link rel="stylesheet" href="ie.css">
+    <link rel="stylesheet" href="ie.css">
 <![endif]-->
 ```  
 
@@ -36,10 +36,9 @@ You might not need a blockquote at first launch, but that doesn't mean it won't 
 Bad
 ```
 p {
-	color: #333333;
+    color: #333333;
 }
 ```
-
 Good
 ```
 p {
@@ -64,7 +63,7 @@ div {
 }
 ```
 
-- **Use comment blocks to separate sections of your page**
+- **Use comment blocks to separate sections of your page**  
 ```
 /*=============================================================
 * Header
