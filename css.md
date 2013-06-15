@@ -16,7 +16,8 @@ Keep the styles out of the HTML. Think separation of concerns. It makes maintean
 ```  
 
 - **Use CSS3 techniques**
-A lot of CSS3 properties can be used right now. 
+A lot of CSS3 properties can be used right now. You can freely use border-radius, box-shadow, text-shadow, multiple backgrounds, resize, transitions and a lot of other properties.  
+Check on [Can I use](http://caniuse.com/) or [HTML5Please](http://html5please.com/#css) for up-to-date compatibility tables.
 
 
 - **Compress your CSS when you're done**  
@@ -24,10 +25,145 @@ A compressed file is smaller, thus faster to load.
 You can use [CSS Optimiser](http://www.cssoptimiser.com/), [CSS compressor](http://www.cssdrive.com/index.php/main/csscompressor/), [Clean CSS](http://www.cleancss.com/)  
 
 - **Style all elements !**  
-You might not need a blockquote at first launch, but that doesn't mean it won't ever be needed. Plan for every possible case !  
+You might not need a blockquote at first launch, but that doesn't mean it won't ever be needed. Plan for every possible case !
+
+- **Learn about CSS preprocessors**
+
+- **Do not use '!important', ever**
+
+- **Try alphabetizing your properties**
+
+- **Use 3-digit hexcodes when possible**  
+Bad
+
+```
+p {
+	color: #333333;
+}
+```
+
+Good
+
+```
+p {
+	color: #333;
+}
+```
+
+- **Use shorthands**  
+Bad
+
+```
+div {
+	margin-left: 5px;  
+    margin-right: 7px;  
+    margin-top: 8px;
+}
+```
+
+Good
+
+```
+div {
+	margin: 8px 7px 0px 5px;
+}
+```
+
+- **Use comment blocks to separate sections of your page**
+
+```
+/*=============================================================
+* Header
+==============================================================*/
+header {
+	...
+}
+...
+
+/*=============================================================
+* Navigation
+==============================================================*/
+nav {
+	...	
+}
+...
+```
+
+- **Understand the difference between block and inline elements**  
+And never put a block element inside an inline element.  
+
+- **Use absolute positioning sparingly**
+
+- **Use multiple stylesheets on development**  
+Just make sure you combine them into one file in production to minimize HTTP requests.
+
+- **Organize your stylesheets**
+
+- **Add meta to your stylesheets**  
+Like who is the author, how to contact him, the date of the last update. A reference to your repetitively used colors. 
+
+- **Try Object Oriented CSS**
+
+
+***
+
+###Selectors
+
+- **Use hyphens instead of underscores**
+
+- **Keep your selectors short**  
+Bad 
+
+```
+body #container .someclass ul li {...}  
+```
+
+Good 
+
+```
+.someclass li {...}  
+```
+
+- **Don't over-qualify your selectors**  
+
+- **Avoid IDs, use classes instead**
+
+- **Your CSS classees should describe the content, not the look**
+
+- **Place one selector per line when using multiple selectors**  
+Bad 
+
+```
+.menu-primary, .menu-secondary, #header .menu {
+	background-color: #fff;
+}
+```
+
+Good
+
+```
+.menu-primary,
+.menu-secondary,
+#header .menu {
+	background-color: #fff;
+}
+```
+
 ***
 
 ###Utilities  
+
+- **Use generic classes**  
+There are some styles that you apply over and over. Create generic classes for those styles, instead of applying these styles to each element individually.
+
+```
+.left {
+	float: left;
+}
+
+div class="left">...</div>
+```
+  
 
 - **Use the Micro Clearfix**  
 This method has been used for a while to clear floats:  
@@ -70,6 +206,8 @@ An old technique to hide text from an element while keeping it accessible was to
 
 ###Text
 
+- **Prefer ems to pixels**
+
 - **Don't justify text**  
 Justified text can generate readability issues by creating uneven spacing in paragraphs, particularly for Dyslexic users.
 
@@ -102,10 +240,26 @@ textarea:focus {
 
 ***
 
+###Images
+
+- **Make images fluid**  
+Make images adapt with the size of their container. This way, images will shrink and grow within their container.  
+
+```
+img {
+	max-width: 100%;
+	height: auto;
+}
+```
+
+- **Combine your images into sprite when possible**
+
+***
+
 ###Background
 
 - **Specify a background color when using background images**  
 If you use a background image behind text, remember that the image might not load, or that the user can disable. Specifying a background color in the tones of the image might improve readability.  
 
 *** 
-Sources: [Line25](http://line25.com/articles/10-usability-crimes-you-really-shouldnt-commit), [Sitepoint](http://www.sitepoint.com/css-architectures-new-best-practices/)
+Sources: [Line25](http://line25.com/articles/10-usability-crimes-you-really-shouldnt-commit), [Sitepoint](http://www.sitepoint.com/css-architectures-new-best-practices/), [Brian Gardner](http://www.briangardner.com/code/css-best-practices/), [Nettuts](http://net.tutsplus.com/tutorials/html-css-techniques/30-css-best-practices-for-beginners/)
