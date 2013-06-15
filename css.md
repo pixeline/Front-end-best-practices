@@ -8,7 +8,6 @@ It is better to use [Normalize.css](http://necolas.github.io/normalize.css/)   t
 Keep the styles out of the HTML. Think separation of concerns. It makes mainteanance much easier.  
 
 - **Target IE with specific stylesheets**  
-
 ```
 <!--[if lt IE 7] >
 	<link rel="stylesheet" href="ie.css">
