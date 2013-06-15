@@ -34,7 +34,6 @@ You might not need a blockquote at first launch, but that doesn't mean it won't 
 
 - **Use 3-digit hexcodes when possible**  
 Bad
-
 ```
 p {
 	color: #333333;
@@ -42,7 +41,6 @@ p {
 ```
 
 Good
-
 ```
 p {
 	color: #333;
@@ -51,7 +49,6 @@ p {
 
 - **Use shorthands**  
 Bad
-
 ```
 div {
 	margin-left: 5px;  
@@ -61,7 +58,6 @@ div {
 ```
 
 Good
-
 ```
 div {
 	margin: 8px 7px 0px 5px;
@@ -69,7 +65,6 @@ div {
 ```
 
 - **Use comment blocks to separate sections of your page**
-
 ```
 /*=============================================================
 * Header
@@ -112,13 +107,11 @@ Like who is the author, how to contact him, the date of the last update. A refer
 
 - **Keep your selectors short**  
 Bad 
-
 ```
 body #container .someclass ul li {...}  
 ```
 
 Good 
-
 ```
 .someclass li {...}  
 ```
@@ -131,7 +124,6 @@ Good
 
 - **Place one selector per line when using multiple selectors**  
 Bad 
-
 ```
 .menu-primary, .menu-secondary, #header .menu {
 	background-color: #fff;
@@ -139,7 +131,6 @@ Bad
 ```
 
 Good
-
 ```
 .menu-primary,
 .menu-secondary,
@@ -154,7 +145,6 @@ Good
 
 - **Use generic classes**  
 There are some styles that you apply over and over. Create generic classes for those styles, instead of applying these styles to each element individually.
-
 ```
 .left {
 	float: left;
@@ -166,7 +156,6 @@ div class="left">...</div>
 
 - **Use the Micro Clearfix**  
 This method has been used for a while to clear floats:  
-
 ```
 div class="clear"></div>
 .clear {
@@ -177,7 +166,6 @@ div class="clear"></div>
 It's huge inconvenient is that you had to add an empty dividers after your floated elements to make it work.  
 The [Micro Clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) is now the most up-to-date best practice for clearing floats. It is supported by all modern browsers and by IE6 and up.  
 The class is applied to the element that contains the floats. This way there is no more need for empty divs.  
-
 ```
 .cf:before,
 .cf:after {
@@ -194,7 +182,6 @@ The class is applied to the element that contains the floats. This way there is 
 
 - **Image replacement**
 An old technique to hide text from an element while keeping it accessible was to indent the text of -9999px. It is actually a bad practice beacause is creates a huge invisible box. Jeffrey Zeldman introduced the world to what he nicknamed the [Kellum Method](http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/) to a much better technique for the same effect.  
-
 ```
 .hide-text {
     text-indent: 100%;
@@ -215,7 +202,6 @@ Justified text can generate readability issues by creating uneven spacing in par
 ###Links
 
 - **Specify a visited state**  
-
 ```
 a:visited {
     color: red;
@@ -230,7 +216,6 @@ Making something that isn't clickable look like it is causes frustration and con
 ###Forms 
 
 - **Indicate when a form field is active**  
-
 ```
 textarea:focus {  
     border: 1px solid red;
@@ -243,7 +228,6 @@ textarea:focus {
 
 - **Make images fluid**  
 Make images adapt with the size of their container. This way, images will shrink and grow within their container.  
-
 ```
 img {
 	max-width: 100%;
