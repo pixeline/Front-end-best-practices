@@ -13,7 +13,7 @@ Be professional when writing your code from the start. Indent it properly, make 
 ```
 <!DOCTYPE html>  
 ```  
-Being the most up-to-date Doctype, it will stay this way for a very long time, ensuring the longevity of your page. All browsers will just render the page in "Standards mode", even if they don't support HTML5 features. [^note-id]
+Being the most up-to-date Doctype, it will stay this way for a very long time, ensuring the longevity of your page. All browsers will just render the page in "Standards mode", even if they don't support HTML5 features.
 
 ***  
 
@@ -50,7 +50,6 @@ It is important for accessibility and validation reasons. The alt attribute will
 Do not duplicate the content of your link in the title attribute. It is there to provide additional information. 
 
 - **Don't place block elements inside inline elements**  
-
 ```  
 Wrong way:  
 <a href="#"><h1>Title</h1></a>  
