@@ -158,17 +158,15 @@ There are some styles that you apply over and over. Create generic classes for t
   
 - **Use the Micro Clearfix**  
 This method has been used for a while to clear floats:  
-<pre><code>
-&lt;div class="clear"&gt;&lt;/div&gt;
+<pre><code>&lt;div class="clear"&gt;&lt;/div&gt;
 .clear {
     clear: both;
 }
-</code></pre>
-  
-The huge inconvenient of this technique is that you had to add an empty dividers after your floated elements to make it work.  
+</code></pre>  
+The huge inconvenient of that technique is that you had to add an empty dividers after your floated elements to make it work.  
 The [Micro Clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) is now the most up-to-date best practice for clearing floats. It is supported by all modern browsers and by IE6 and up.  
 The class is applied to the element that contains the floats. This way there is no more need for empty divs.  
-```
+<code><pre>
 .cf:before,
 .cf:after {
     content: "";
@@ -180,19 +178,19 @@ The class is applied to the element that contains the floats. This way there is 
 .cf {
     *zoom: 1;
 }
-```
+</pre></code>
 
 - **Image replacement**
 An old technique to hide text from an element while keeping it accessible was to indent the text of -9999px. It is actually a bad practice beacause is creates a huge invisible box. Jeffrey Zeldman introduced the world to what he nicknamed the [Kellum Method](http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/) to a much better technique for the same effect.  
-```
+<code><pre>
 .hide-text {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
 }
-```
+</pre></code>
 
-###Text
+## Text
 
 - **Prefer ems to pixels**
 
@@ -201,7 +199,7 @@ Justified text can generate readability issues by creating uneven spacing in par
 
 ***
 
-###Links
+## Links
 
 - **Specify a visited state**  
 ```
@@ -215,7 +213,7 @@ Making something that isn't clickable look like it is causes frustration and con
 
 ***
 
-###Forms 
+## Forms 
 
 - **Indicate when a form field is active**  
 ```
@@ -226,7 +224,7 @@ textarea:focus {
 
 ***
 
-###Images
+## Images
 
 - **Make images fluid**  
 Make images adapt with the size of their container. This way, images will shrink and grow within their container.  
@@ -241,7 +239,7 @@ img {
 
 ***
 
-###Background
+## Background
 
 - **Specify a background color when using background images**  
 If you use a background image behind text, remember that the image might not load, or that the user can disable. Specifying a background color in the tones of the image might improve readability.  
