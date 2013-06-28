@@ -150,17 +150,15 @@ Good
 
 - **Use generic classes**  
 There are some styles that you apply over and over. Create generic classes for those styles, instead of applying these styles to each element individually.  
-
 ```
 .left {
 	float: left;
 }
 ```
   
-
 - **Use the Micro Clearfix**  
 This method has been used for a while to clear floats:  
-<pre><code>&tl;div class="clear"&gt;&lt;/div&gt;
+<pre><code>&lt;div class="clear"&gt;&lt;/div&gt;
 .clear {
     clear: both;
 }
