@@ -1,4 +1,4 @@
-###General  
+## Stylesheets  
 
 - **Use Normalize.css**  
 In their own words: "It makes browsers render all elements more consistently and in line with modern standards."  
@@ -14,23 +14,24 @@ Keep the styles out of the HTML. Think separation of concerns. It makes maintean
 <![endif]-->
 ```  
 
-- **Use CSS3 techniques**
-A lot of CSS3 properties can be used right now. You can freely use border-radius, box-shadow, text-shadow, multiple backgrounds, resize, transitions and a lot of other properties.  
-Check on [Can I use](http://caniuse.com/) or [HTML5Please](http://html5please.com/#css) for up-to-date compatibility tables.
-
-
 - **Compress your CSS when you're done**  
 A compressed file is smaller, thus faster to load.  
-You can use [CSS Optimiser](http://www.cssoptimiser.com/), [CSS compressor](http://www.cssdrive.com/index.php/main/csscompressor/), [Clean CSS](http://www.cleancss.com/)  
+You can use [CSS Optimiser](http://www.cssoptimiser.com/), [CSS compressor](http://www.csscompressor.com/), [Clean CSS](http://www.cleancss.com/)  
+
+***
+
+## General
+
+- **Use CSS3 techniques**  
+A lot of CSS3 properties can be used right now. You can freely use border-radius, box-shadow, text-shadow, rgba, opacity, multiple backgrounds, resize, transitions, etc.  
+Check on [CanIUse](http://caniuse.com/) or [HTML5Please](http://html5please.com/#css) for up-to-date compatibility tables.
 
 - **Style all elements !**  
 You might not need a blockquote at first launch, but that doesn't mean it won't ever be needed. Plan for every possible case !
 
-- **Learn about CSS preprocessors**
+
 
 - **Do not use '!important', ever**
-
-- **Try alphabetizing your properties**
 
 - **Use 3-digit hexcodes when possible**  
 Bad
@@ -38,11 +39,11 @@ Bad
 p {
     color: #333333;
 }
-```
+```  
 Good
 ```
 p {
-	color: #333;
+    color: #333;
 }
 ```
 
@@ -50,36 +51,16 @@ p {
 Bad
 ```
 div {
-	margin-left: 5px;  
+    margin-left: 5px;  
     margin-right: 7px;  
     margin-top: 8px;
 }
-```
-
+```  
 Good
 ```
 div {
-	margin: 8px 7px 0px 5px;
+    margin: 8px 7px 0px 5px;
 }
-```
-
-- **Use comment blocks to separate sections of your page**  
-```
-/*=============================================================
-* Header
-==============================================================*/
-header {
-	...
-}
-...
-
-/*=============================================================
-* Navigation
-==============================================================*/
-nav {
-	...	
-}
-...
 ```
 
 - **Understand the difference between block and inline elements**  
@@ -95,12 +76,39 @@ Just make sure you combine them into one file in production to minimize HTTP req
 - **Add meta to your stylesheets**  
 Like who is the author, how to contact him, the date of the last update. A reference to your repetitively used colors. 
 
-- **Try Object Oriented CSS**
+- **Learn about CSS preprocessors**  
 
+- **Try Object Oriented CSS**
 
 ***
 
-###Selectors
+## Structure
+
+- **Use comment blocks to separate sections of your page**  
+
+```
+/*=============================================================
+* Header
+==============================================================*/
+header {
+    ...
+}
+...
+
+/*=============================================================
+* Content
+==============================================================*/
+.content {
+    ... 
+}
+...
+```
+
+- **Try alphabetizing your properties**
+
+***
+
+## Selectors
 
 - **Use hyphens instead of underscores**
 
@@ -108,8 +116,7 @@ Like who is the author, how to contact him, the date of the last update. A refer
 Bad 
 ```
 body #container .someclass ul li {...}  
-```
-
+```  
 Good 
 ```
 .someclass li {...}  
@@ -127,8 +134,7 @@ Bad
 .menu-primary, .menu-secondary, #header .menu {
 	background-color: #fff;
 }
-```
-
+```  
 Good
 ```
 .menu-primary,
@@ -140,27 +146,26 @@ Good
 
 ***
 
-###Utilities  
+## Utilities  
 
 - **Use generic classes**  
-There are some styles that you apply over and over. Create generic classes for those styles, instead of applying these styles to each element individually.
+There are some styles that you apply over and over. Create generic classes for those styles, instead of applying these styles to each element individually.  
+
 ```
 .left {
 	float: left;
 }
-
-div class="left">...</div>
 ```
   
 
 - **Use the Micro Clearfix**  
 This method has been used for a while to clear floats:  
-```
-div class="clear"></div>
+<pre><code>&tl;div class="clear"&gt;&lt;/div&gt;
 .clear {
-	clear: both;
+    clear: both;
 }
-```  
+</code></pre>
+  
 
 It's huge inconvenient is that you had to add an empty dividers after your floated elements to make it work.  
 The [Micro Clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) is now the most up-to-date best practice for clearing floats. It is supported by all modern browsers and by IE6 and up.  
