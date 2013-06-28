@@ -158,14 +158,14 @@ There are some styles that you apply over and over. Create generic classes for t
   
 - **Use the Micro Clearfix**  
 This method has been used for a while to clear floats:  
-<pre><code>&lt;div class="clear"&gt;&lt;/div&gt;
+<pre><code>
+&lt;div class="clear"&gt;&lt;/div&gt;
 .clear {
     clear: both;
 }
 </code></pre>
   
-
-It's huge inconvenient is that you had to add an empty dividers after your floated elements to make it work.  
+The huge inconvenient of this technique is that you had to add an empty dividers after your floated elements to make it work.  
 The [Micro Clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) is now the most up-to-date best practice for clearing floats. It is supported by all modern browsers and by IE6 and up.  
 The class is applied to the element that contains the floats. This way there is no more need for empty divs.  
 ```
